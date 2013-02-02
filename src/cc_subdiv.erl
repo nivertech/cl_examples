@@ -170,7 +170,13 @@ initCL() ->
     [Device|_] = CL#cl.devices,
     {ok,Queue} = cl:create_queue(CL#cl.context,Device,[]),
     %%% Compile
-    Dir = filename:join(code:lib_dir(cl),"examples"),
+    % TODO - need to be a real OTP app for priv_dir to work
+    Dir = case code:priv_dir(cl_examples) of
+            {error, bad_name} ->
+                "priv";
+            D ->
+                D
+          end,
     Bin = case file:read_file(filename:join([Dir, "cc_subdiv.cl"])) of
 	      {ok, B} -> B;
 	      {error, _} ->

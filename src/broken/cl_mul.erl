@@ -9,7 +9,7 @@
 
 -import(lists, [map/2]).
 
--include("../include/cl.hrl").
+-include_lib("cl/include/cl.hrl").
 
 -define(DATA_SIZE, 1024).
 -define(ITEM_SIZE, (16*4)).

@@ -1,0 +1,16 @@
+%%% -*- mode: erlang -*-
+
+{application, cl_examples,
+ [
+  {description, "Examples for OpenCL Erlang binding"},
+  {vsn, "1.1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  cl
+                 ]},
+  %{mod, {cl_examples, []}},
+  {env, [
+        ]}
+ ]}.

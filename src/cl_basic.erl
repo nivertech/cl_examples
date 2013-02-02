@@ -4,7 +4,7 @@
 -compile(export_all).
 -import(lists, [foreach/2]).
 
--include("../include/cl.hrl").
+-include_lib("cl/include/cl.hrl").
 
 test() ->
     test(all).
