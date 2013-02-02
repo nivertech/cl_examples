@@ -11,7 +11,7 @@ https://github.com/tonyrog/cl/tree/master/examples
 Clone, get CL OpenCL Erlang library and compile:
 
 ```bash
-rebar clone 
+rebar clone git@github.com:nivertech/cl_examples.git 
 cd cl_examples
 rebar get-deps
 rebar compile
